@@ -57,7 +57,7 @@ website.config(function ($stateProvider, $urlRouterProvider, $locationProvider) 
   $stateProvider
     //state for homepage don't put semicolon until last .state
     .state('home', {
-      url: '/home', //this is like www.websitename.com/home
+      url: '//home', //this is like www.websitename.com/home
       templateUrl: '/templates/home.html',
       controller: 'homeCtrl',
       parent: 'signup'
@@ -68,13 +68,13 @@ website.config(function ($stateProvider, $urlRouterProvider, $locationProvider) 
       controller: 'signupCtrl'
     })
     .state('acount', {
-      url: '/acount',
+      url: '//acount',
       templateUrl: '/templates/acount.html',
       controller: 'acountCtrl',
       parent: 'signup'
     })
     .state('404', {
-      url:'/whoopsies',
+      url:'//whoopsies',
       templateUrl: '/templates/404.html',
       controller: 'fourofourCtrl',
       parent: 'signup'
