@@ -13,7 +13,8 @@ website.run(function ($state, $rootScope, $window) {
 //  } else {
 //    $state.go('signup')
 //  }
-    ui-sref='signup'
+
+    // ui-sref='signup'
     // $state.go('whoopsies')
     // $state.go('home')
     // $state.go('acount')
