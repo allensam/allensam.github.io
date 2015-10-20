@@ -70,10 +70,9 @@ website.config(function ($stateProvider, $urlRouterProvider, $locationProvider) 
     })
     .state('404', {
       url:'/whoopsies',
-      templateUrl: '/templates/404.html',
+      templateUrl: '/templates/whoopsies.html',
       controller: 'fourofourCtrl'
     });
-
 
 
 
