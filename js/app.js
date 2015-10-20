@@ -14,6 +14,9 @@ website.run(function ($state, $rootScope, $window) {
 //    $state.go('signup')
 //  }
     $state.go('signup')
+    $state.go('whoopsies')
+    $state.go('home')
+    $state.go('acount')
   //checks if user is online or not
   $rootScope.online = navigator.onLine;
       $window.addEventListener("offline", function () {
@@ -54,7 +57,7 @@ website.config(function ($stateProvider, $urlRouterProvider, $locationProvider) 
   $stateProvider
     //state for homepage don't put semicolon until last .state
     .state('home', {
-      url: 'home', //this is like www.websitename.com/home
+      url: '/home', //this is like www.websitename.com/home
       templateUrl: '/templates/home.html',
       controller: 'homeCtrl'
     })
@@ -64,17 +67,17 @@ website.config(function ($stateProvider, $urlRouterProvider, $locationProvider) 
       controller: 'signupCtrl'
     })
     .state('acount', {
-      url: 'acount',
+      url: '/acount',
       templateUrl: '/templates/acount.html',
       controller: 'acountCtrl'
     })
     .state('404', {
-      url:'whoopsies',
+      url:'/whoopsies',
       templateUrl: '/templates/404.html',
       controller: 'fourofourCtrl'
     });
 
 
   //fallback state
-  $urlRouterProvider.otherwise('whoopsies');
+  $urlRouterProvider.otherwise('/whoopsies');
 });
