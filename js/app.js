@@ -46,7 +46,7 @@ website.config(function ($stateProvider, $urlRouterProvider, $locationProvider) 
     .html5Mode(
       {
         enabled: true,
-        requireBase: false,
+        requireBase: true,
       })
     .hashPrefix('!');
 
