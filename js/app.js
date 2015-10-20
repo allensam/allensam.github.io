@@ -2,7 +2,7 @@
 var website = angular.module('app', ['app.controllers', 'app.services', 'ui.router']);
 
 
-website.run(function ($state, $rootScope, $window) {
+website.run(function ($state, $rootScope, $window, $stateParams) {
   //code that runs when website is first opened
 
   //here will be a function that checks to see if any login cookie exists if not login page
@@ -13,7 +13,8 @@ website.run(function ($state, $rootScope, $window) {
 //  } else {
 //    $state.go('signup')
 //  }
-
+  $rootScope.$state = $state;
+  $rootScope.$stateParams = $stateParams;
     // ui-sref='signup'
     // $state.go('whoopsies')
     // $state.go('home')
@@ -41,9 +42,14 @@ website.run(function ($state, $rootScope, $window) {
 
 website.config(function ($stateProvider, $urlRouterProvider, $locationProvider) { //enables html5 so that routing looks better
 
-  $locationProvider.html5Mode({
-    enabled: true
-  });
+  $locationProvider
+    .html5Mode(
+      {
+        enabled: true,
+        requireBase: false,
+      })
+    .hashPrefix('!');
+
 
   //calles the stateProvider which is basically a thing that handles the state of the html (what page it is on)
 
