@@ -41,7 +41,7 @@ website.run(function ($state, $rootScope, $window) {
 
 website.config(function ($stateProvider, $urlRouterProvider, $locationProvider) { //enables html5 so that routing looks better
 
-  $locationProvider.html5Mode(true).hashPrefix('!');
+  $locationProvider.html5Mode(true);
 
   //calles the stateProvider which is basically a thing that handles the state of the html (what page it is on)
 
