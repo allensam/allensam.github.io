@@ -59,7 +59,8 @@ website.config(function ($stateProvider, $urlRouterProvider, $locationProvider) 
     .state('home', {
       url: '/home', //this is like www.websitename.com/home
       templateUrl: '/templates/home.html',
-      controller: 'homeCtrl'
+      controller: 'homeCtrl',
+      parent: 'signup'
     })
     .state('signup', {
       url: '/', //bascially like www.websitename.com with nothing at the end
@@ -69,12 +70,14 @@ website.config(function ($stateProvider, $urlRouterProvider, $locationProvider) 
     .state('acount', {
       url: '/acount',
       templateUrl: '/templates/acount.html',
-      controller: 'acountCtrl'
+      controller: 'acountCtrl',
+      parent: 'signup'
     })
     .state('404', {
       url:'/whoopsies',
       templateUrl: '/templates/404.html',
-      controller: 'fourofourCtrl'
+      controller: 'fourofourCtrl',
+      parent: 'signup'
     });
 
 
