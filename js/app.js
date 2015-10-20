@@ -71,4 +71,7 @@ website.config(function ($stateProvider, $urlRouterProvider) {
 
   //fallback state
   $urlRouterProvider.otherwise('/whoopsies');
-});
+}, //enables html5 so that routing looks better
+['$locationProvider', function ($locationProvider){
+  $locationProvider.html5Mode(true);
+}]);

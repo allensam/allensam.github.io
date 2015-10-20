@@ -1,10 +1,10 @@
-<body>
-  <header>
+<div ui-view>
+  <div class="header">
         <!-- appears if offline -->
     <div id="OnlineOrOff" ng-hide="{{online}}">
       <h1>Whoops! It appears you're offline</h1>
     </div>
-  </header>
+  </div>
 
   <div id="signupform">
     <form>
@@ -12,6 +12,6 @@
       Email: <input ng-model="user.mail" ng-model-options="{ debounce: 500 }"/>
       Password <input ng-show="checkUserNameAvalibility()" ng-model="user.password"/>
     </form>
-    
+
   </div>
-</body>
+</div>
