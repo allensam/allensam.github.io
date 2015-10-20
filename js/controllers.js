@@ -5,6 +5,10 @@
 //ill have to check but it doesnt matter it will work (maybe) either way
 angular.module('app.controllers', ['firebase'])
 
+.controller('fourofourCtrl', function() {
+  
+})
+
 .controller('homeCtrl', function () {
 
 })
