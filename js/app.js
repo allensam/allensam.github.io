@@ -14,9 +14,9 @@ website.run(function ($state, $rootScope, $window) {
 //    $state.go('signup')
 //  }
     $state.go('signup')
-    $state.go('whoopsies')
-    $state.go('home')
-    $state.go('acount')
+    // $state.go('whoopsies')
+    // $state.go('home')
+    // $state.go('acount')
   //checks if user is online or not
   $rootScope.online = navigator.onLine;
       $window.addEventListener("offline", function () {
@@ -40,10 +40,7 @@ website.run(function ($state, $rootScope, $window) {
 
 website.config(function ($stateProvider, $urlRouterProvider, $locationProvider) { //enables html5 so that routing looks better
 
-  $locationProvider.html5Mode({
-    enabled: true,
-    requireBase: false
-  });
+  $locationProvider.html5Mode(true).hashPrefix('!');
 
   //calles the stateProvider which is basically a thing that handles the state of the html (what page it is on)
 
@@ -54,31 +51,33 @@ website.config(function ($stateProvider, $urlRouterProvider, $locationProvider) 
 
   //controllers are what run what is on the html pages like buttons logins etc
   //for more info refer to the above link
-  $stateProvider
-    //state for homepage don't put semicolon until last .state
-    .state('home', {
-      url: '/home', //this is like www.websitename.com/home
-      templateUrl: '/templates/home.html',
-      controller: 'homeCtrl',
-      parent: 'signup'
-    })
-    .state('signup', {
-      url: '/', //bascially like www.websitename.com with nothing at the end
-      templateUrl: '/templates/signup.html',
-      controller: 'signupCtrl'
-    })
-    .state('acount', {
-      url: '/acount',
-      templateUrl: '/templates/acount.html',
-      controller: 'acountCtrl',
-      parent: 'signup'
-    })
-    .state('404', {
-      url:'/whoopsies',
-      templateUrl: '/templates/404.html',
-      controller: 'fourofourCtrl',
-      parent: 'signup'
-    });
+  // $stateProvider
+  //   //state for homepage don't put semicolon until last .state
+  //   .state('home', {
+  //     url: '/home', //this is like www.websitename.com/home
+  //     templateUrl: '/templates/home.html',
+  //     controller: 'homeCtrl',
+  //     parent: 'signup'
+  //   })
+  //   .state('signup', {
+  //     url: '/', //bascially like www.websitename.com with nothing at the end
+  //     templateUrl: '/templates/signup.html',
+  //     controller: 'signupCtrl'
+  //   })
+  //   .state('acount', {
+  //     url: '/acount',
+  //     templateUrl: '/templates/acount.html',
+  //     controller: 'acountCtrl',
+  //     parent: 'signup'
+  //   })
+  //   .state('404', {
+  //     url:'/whoopsies',
+  //     templateUrl: '/templates/404.html',
+  //     controller: 'fourofourCtrl',
+  //     parent: 'signup'
+  //   });
+
+
 
 
   //fallback state
