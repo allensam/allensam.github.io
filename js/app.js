@@ -13,7 +13,7 @@ website.run(function ($state, $rootScope, $window) {
 //  } else {
 //    $state.go('signup')
 //  }
-    $state.go('signup')
+    $state.go('')
   //checks if user is online or not
   $rootScope.online = navigator.onLine;
       $window.addEventListener("offline", function () {
