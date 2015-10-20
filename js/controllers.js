@@ -3,10 +3,10 @@
 
 //update now it grabs from directives because nothing uses directives but controllers i think
 //ill have to check but it doesnt matter it will work (maybe) either way
-angular.module('app.controllers', ['firebase'])
+angular.module('app.controllers', ['firebase', 'fireBaseData'])
 
 .controller('fourofourCtrl', function() {
-  
+
 })
 
 .controller('homeCtrl', function () {

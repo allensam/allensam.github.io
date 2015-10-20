@@ -13,6 +13,7 @@ website.run(function ($state, $rootScope, $window) {
 //  } else {
 //    $state.go('signup')
 //  }
+console.log('firest')
     $state.go('signup')
   //checks if user is online or not
   $rootScope.online = navigator.onLine;
