@@ -17,7 +17,7 @@ angular.module('app.controllers', ['firebase'])
 
 })
 
-.controller('signupCtrl', function ($firebase) {
+.controller('signupCtrl', function ($firebase, $scope) {
   //connects to database
   var ref = new Firebase("https://sumbits-scroller.firebaseio.com/");
   var sync = $firebase(ref);

@@ -13,8 +13,7 @@ website.run(function ($state, $rootScope, $window) {
 //  } else {
 //    $state.go('signup')
 //  }
-console.log('firest')
-    $state.go('signup')
+    $state.go('/')
   //checks if user is online or not
   $rootScope.online = navigator.onLine;
       $window.addEventListener("offline", function () {
@@ -36,7 +35,10 @@ console.log('firest')
 //in fact you can make all the pages one page but seprate html files so that the whole website loads on the inital load
 //but for our purposes we will not be doing that
 
-website.config(function ($stateProvider, $urlRouterProvider) {
+website.config(function ($stateProvider, $urlRouterProvider, $locationProvider) { //enables html5 so that routing looks better
+  
+  $locationProvider.html5Mode(true);
+
   //calles the stateProvider which is basically a thing that handles the state of the html (what page it is on)
 
   //the html pages locations are always in template the way you work it is:
@@ -72,7 +74,4 @@ website.config(function ($stateProvider, $urlRouterProvider) {
 
   //fallback state
   $urlRouterProvider.otherwise('/whoopsies');
-}, //enables html5 so that routing looks better
-['$locationProvider', function ($locationProvider){
-  $locationProvider.html5Mode(true);
-}]);
+});
