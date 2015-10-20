@@ -3,7 +3,7 @@
 
 //update now it grabs from directives because nothing uses directives but controllers i think
 //ill have to check but it doesnt matter it will work (maybe) either way
-angular.module('app.controllers', ['firebase', 'fireBaseData'])
+angular.module('app.controllers', ['firebase'])
 
 .controller('fourofourCtrl', function() {
 
@@ -17,7 +17,7 @@ angular.module('app.controllers', ['firebase', 'fireBaseData'])
 
 })
 
-.controller('signupCtrl', function ($firebase, fireBaseData) {
+.controller('signupCtrl', function ($firebase) {
   //connects to database
   var ref = new Firebase("https://sumbits-scroller.firebaseio.com/");
   var sync = $firebase(ref);
@@ -43,19 +43,19 @@ angular.module('app.controllers', ['firebase', 'fireBaseData'])
     }
     put(Key, User_Data)
 
-        //creates account in firebase
-        //allowed to edit data stuff
-        fireBaseData.ref().createUser({
-            email: em,
-            password: pwd
-        }, function (error) {
-            if (error == null) {
-                console.log("User created successfully.");
-                loginFunction(em, pwd);
-            } else {
-                console.log("Error creating user: ", error);
-            }
-        });
+        // //creates account in firebase
+        // //allowed to edit data stuff
+        // fireBaseData.ref().createUser({
+        //     email: em,
+        //     password: pwd
+        // }, function (error) {
+        //     if (error == null) {
+        //         console.log("User created successfully.");
+        //         loginFunction(em, pwd);
+        //     } else {
+        //         console.log("Error creating user: ", error);
+        //     }
+        // });
     };
 
 
