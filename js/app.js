@@ -13,7 +13,7 @@ website.run(function ($state, $rootScope, $window) {
 //  } else {
 //    $state.go('signup')
 //  }
-    $state.go('signup')
+    ui-sref='signup'
     // $state.go('whoopsies')
     // $state.go('home')
     // $state.go('acount')
@@ -51,35 +51,32 @@ website.config(function ($stateProvider, $urlRouterProvider, $locationProvider) 
 
   //controllers are what run what is on the html pages like buttons logins etc
   //for more info refer to the above link
-  // $stateProvider
-  //   //state for homepage don't put semicolon until last .state
-  //   .state('home', {
-  //     url: '/home', //this is like www.websitename.com/home
-  //     templateUrl: '/templates/home.html',
-  //     controller: 'homeCtrl',
-  //     parent: 'signup'
-  //   })
-  //   .state('signup', {
-  //     url: '/', //bascially like www.websitename.com with nothing at the end
-  //     templateUrl: '/templates/signup.html',
-  //     controller: 'signupCtrl'
-  //   })
-  //   .state('acount', {
-  //     url: '/acount',
-  //     templateUrl: '/templates/acount.html',
-  //     controller: 'acountCtrl',
-  //     parent: 'signup'
-  //   })
-  //   .state('404', {
-  //     url:'/whoopsies',
-  //     templateUrl: '/templates/404.html',
-  //     controller: 'fourofourCtrl',
-  //     parent: 'signup'
-  //   });
+  $stateProvider
+    //state for homepage don't put semicolon until last .state
+    .state('home', {
+      url: '/home', //this is like www.websitename.com/home
+      templateUrl: '/templates/home.html',
+      controller: 'homeCtrl'
+    })
+    .state('signup', {
+      url: '/', //bascially like www.websitename.com with nothing at the end
+      templateUrl: '/templates/signup.html',
+      controller: 'signupCtrl'
+    })
+    .state('acount', {
+      url: '/acount',
+      templateUrl: '/templates/acount.html',
+      controller: 'acountCtrl'
+    })
+    .state('404', {
+      url:'/whoopsies',
+      templateUrl: '/templates/404.html',
+      controller: 'fourofourCtrl'
+    });
 
 
 
 
   //fallback state
-  $urlRouterProvider.otherwise('/whoopsies');
+  // $urlRouterProvider.otherwise('/whoopsies');
 });
