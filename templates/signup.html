@@ -8,10 +8,11 @@
 
   <div id="signupform">
     <form>
-      Username: <input ng-model="user.name" ng-model-options="{ debounce: 500 }"/>
-      Email: <input ng-model="user.mail" ng-model-options="{ debounce: 500 }"/>
+      Username: <input ng-model="user.name" ng-model-options="{ debounce: 500 }"/><br>
+      Email: <input ng-model="user.mail" ng-model-options="{ debounce: 500 }"/><br>
       Password <input ng-show="checkUserNameAvalibility()" ng-model="user.password"/>
     </form>
 
+    <button type="button" class="btn btn-info" ui-sref="home()">Add Slide</button>
   </div>
 </div>
