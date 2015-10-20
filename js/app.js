@@ -68,7 +68,7 @@ website.config(function ($stateProvider, $urlRouterProvider, $locationProvider) 
       templateUrl: '/templates/acount.html',
       controller: 'acountCtrl'
     })
-    .state('404', {
+    .state('whoopsies', {
       url:'/whoopsies',
       templateUrl: '/templates/whoopsies.html',
       controller: 'fourofourCtrl'
