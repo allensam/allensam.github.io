@@ -40,9 +40,9 @@ website.run(function ($state, $rootScope, $window, $stateParams) {
 //in fact you can make all the pages one page but seprate html files so that the whole website loads on the inital load
 //but for our purposes we will not be doing that
 
-website.config(function ($stateProvider, $urlRouterProvider, $locationProvider, $routeProvider) { //enables html5 so that routing looks better
+website.config(function ($stateProvider, $urlRouterProvider, $locationProvider) { //enables html5 so that routing looks better
   
-   $routeProvider.
+   $urlRouterProvider.
         when('/home', {templateUrl: 'templates/home.html'}).
         when('/whoopsies', {templateUrl: 'templates/whoopsies.html'}).
         otherwise({redirectTo: '/whoopsies'});
