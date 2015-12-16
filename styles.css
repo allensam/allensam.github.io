@@ -11,11 +11,11 @@ html, body {
 	font-family: 'PT Serif', serif;
   text-align: center;
   color: white;
-  font-size: 40px;
+  font-size: 30px;
 }
 
 h1 {
-  font-size: 70px;
+  font-size: 50px;
 }
 
 ul {
@@ -28,7 +28,7 @@ ul li {
   width: 100%;
   background-color: rgb(207, 73, 73);
   text-align: center;
-  padding: 50px;
+  padding: 40px;
 }
 
 .computers {
